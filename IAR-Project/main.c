@@ -24,7 +24,7 @@
 #define CHECK_MSEC    10
 #define PRESS_MSEC    40
 #define RELEASE_MSEC 100
-#define TIMEOUT     6000 /* in CHECK_MSEC periods */
+#define TIMEOUT     60000 /* in CHECK_MSEC periods */
 
 volatile bool pwm0 = false, pwm1 = false;
 
