@@ -139,7 +139,7 @@
         <option>
           <name>GeneralMisraRules04</name>
           <version>0</version>
-          <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+          <state>111101010010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
         </option>
         <option>
           <name>RadioL092ModelType</name>
@@ -297,7 +297,7 @@
         </option>
         <option>
           <name>CCRequirePrototypes</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCAllowList</name>
@@ -1175,7 +1175,7 @@
         </option>
         <option>
           <name>GeneralEnableMisra</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>GeneralMisraVerbose</name>
