@@ -15,11 +15,13 @@
 #include <stdbool.h>
 #endif /* __cplusplus__ */
 
-#define P2MAP (BIT6 | BIT7) /* set to 0xFF for 20-pin device */
-#define BUTTON0 BIT4
-#define BUTTON1 BIT5
-#define PLATE0  BIT6
-#define PLATE1  BIT7
+#define P2MAP      (BIT6 | BIT7) /* set to 0xFF for 20-pin device */
+#define BUTTON0    BIT4
+#define BUTTON1    BIT5
+#define PLATE0     BIT6
+#define PLATE1     BIT7
+#define DEBUG_10MS BIT0
+#define DEBUG_1MS  BIT3
 
 const uint16_t CHECK_MSEC   =    10u;
 const uint16_t PRESS_MSEC   =    40u;
@@ -49,7 +51,7 @@ int main(void)
 
   // Set up I/O (buttons as interrupt, LEDs off)
   P2SEL = 0u; // Set crystal I/O to GPIO
-  P1REN = (uint8_t)~(PLATE0 | PLATE1); // All pin pull up/down, except ouputs
+  P1REN = (uint8_t)~(PLATE0 | PLATE1 | DEBUG_10MS | DEBUG_1MS); // All pin pull up/down, except ouputs
   P2REN = P2MAP; // Also on port 2
   P1DIR = (uint8_t)~(BUTTON0 | BUTTON1); // disable all input, except inputs
   P2DIR = P2MAP; // Also on port 2
@@ -82,6 +84,7 @@ __interrupt void PORT1_ISR(void)
 __interrupt void TIMER0_A1_ISR(void)
 {
   TACCTL1 &= ~CCIFG; // clear interrupt flag
+  P1OUT ^= DEBUG_1MS;
     
   if (pwm0 || pwm1) {
     if (TACCR1 == TIMINGS_1MS) {
@@ -89,23 +92,25 @@ __interrupt void TIMER0_A1_ISR(void)
         P1OUT |= PLATE0;
       }
       TACCR1 = TIMINGS_4MS;
-        
-    } else if (TACCR1 == TIMINGS_4MS) {
+      
+    } else if (TACCR1 == TIMINGS_4MS) { 
       P1OUT &= ~PLATE0;
       TACCR1 = TIMINGS_6MS;
-        
+      
     } else if (TACCR1 == TIMINGS_6MS) {
       if (pwm1) {
         P1OUT |= PLATE1;
       }
       TACCR1 = TIMINGS_9MS;
-
+      
     } else if (TACCR1 == TIMINGS_9MS) {
       P1OUT &= ~PLATE1;
       TACCR1 = TIMINGS_1MS;
-
-    } else {        
+      
+    } else {
+      // error handling
       TAR = 0u;
+      TACCR1 = TIMINGS_1MS;
     }
   }
 }
@@ -118,7 +123,8 @@ __interrupt void TIMER0_A0_ISR(void)
   static uint16_t timeout;
 
   TACCTL0 &= ~CCIFG; // clear interrupt flag
-  
+  P1OUT ^= DEBUG_10MS;
+
   // Handle button 0
   if (debounce(state0, (bool)(P1IN & BUTTON0), &count0))
   {

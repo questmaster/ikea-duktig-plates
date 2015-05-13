@@ -6,118 +6,118 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Exe\IKEA-plates.ulp</file>
-      <file>$PROJ_DIR$\Debug\Obj\IKEA-plates.pbd</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\IKEA-plates.d43</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\config\linker\lnk430g2231.xcl</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2231.h</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdbool.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
+      <file>$TOOLKIT_DIR$\config\linker\lnk430g2231.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2231.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\IKEA-plates.d43</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdbool.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\IKEA-plates.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r43</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\IKEA-plates.ulp</file>
     </outputs>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 18</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 16</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICC430</name>
+          <file> 10 12 2 5 17 6 19 8 7 11 9 0 14</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6 12 14 2 5 19 17 9 10 8 0 7 11</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>ULP430</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+    </file>
     <file>
       <name>$PROJ_DIR$\Debug\Exe\IKEA-plates.d43</name>
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 9 2 20</file>
+          <file> 4 18 3</file>
         </tool>
       </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 3</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 2</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 4 6 15 11 12 17 5 10 18 16 19 13 14</file>
-        </tool>
-        <tool>
-          <name>ICC430</name>
-          <file> 19 10 11 13 5 18 4 12 17 16 14 6 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>[ROOT_NODE]</name>
-      <outputs>
-        <tool>
-          <name>XLINK</name>
-          <file> 7</file>
-        </tool>
-        <tool>
-          <name>ULP430</name>
-          <file> 0</file>
-        </tool>
-      </outputs>
     </file>
   </configuration>
   <configuration>
     <name>Release</name>
     <outputs>
-      <file>$PROJ_DIR$\Release\Exe\IKEA-plates.ulp</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
       <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Threads.h</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\config\linker\lnk430g2231.xcl</file>
-      <file>$TOOLKIT_DIR$\inc\msp430g2231.h</file>
       <file>$TOOLKIT_DIR$\inc\in430.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\stdbool.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
-      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
       <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.r43</file>
-      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Release\Exe\IKEA-plates.txt</file>
+      <file>$TOOLKIT_DIR$\config\linker\lnk430g2231.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlib\dl430fn.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\inc\msp430g2231.h</file>
       <file>$PROJ_DIR$\Release\Obj\main.r43</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdbool.h</file>
+      <file>$PROJ_DIR$\Release\Exe\IKEA-plates.txt</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\stdint.h</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Release\Exe\IKEA-plates.ulp</file>
+      <file>$TOOLKIT_DIR$\inc\dlib\c\yvals.h</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 17</file>
+          <name>ICC430</name>
+          <file> 13</file>
         </tool>
         <tool>
-          <name>ICC430</name>
-          <file> 19</file>
+          <name>BICOMP</name>
+          <file> 17</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 1 3 11 6 8 13 2 7 14 12 15 9 10</file>
+          <name>ICC430</name>
+          <file> 10 12 2 5 16 6 19 8 7 11 9 0 14</file>
         </tool>
         <tool>
-          <name>ICC430</name>
-          <file> 15 6 7 9 2 14 1 8 13 12 10 3 11</file>
+          <name>BICOMP</name>
+          <file> 19 0 14 12 8 7 16 2 6 11 10 5 9</file>
         </tool>
       </inputs>
     </file>
@@ -126,11 +126,11 @@
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 18</file>
+          <file> 15</file>
         </tool>
         <tool>
           <name>ULP430</name>
-          <file> 0</file>
+          <file> 18</file>
         </tool>
       </outputs>
     </file>
@@ -139,7 +139,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 5 19 16</file>
+          <file> 4 13 3</file>
         </tool>
       </inputs>
     </file>
